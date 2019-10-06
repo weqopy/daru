@@ -127,7 +127,7 @@ describe Daru::IO do
 
         expect(df.nrows).to eq(6)
         expect(df.vectors.to_a).to eq([:id, :name, :age, :city, :a1])
-        expect(df[:age][5]).to eq(nil)
+        expect(df[:age][6]).to eq(nil)
         expect(@expected).to eq(df)
       end
 
@@ -136,7 +136,7 @@ describe Daru::IO do
 
         expect(df.nrows).to eq(7)
         expect(df.vectors.to_a).to eq([:id2, :name2, :age2])
-        expect(df[:age2][5]).to eq(nil)
+        expect(df[:age2][6]).to eq(nil)
         expect(@expected_1).to eq(df)
       end
 
