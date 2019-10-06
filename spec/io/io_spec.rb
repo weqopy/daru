@@ -123,7 +123,7 @@ describe Daru::IO do
     end
 
     context "#from_excel with row_id" do
-      before 
+      before do
         id   = Daru::Vector.new(['id', 1.0, 2.0, 3.0, 4.0, 5.0, 6.0])
         name = Daru::Vector.new(%w(name Alex Claude Peter Franz George Fernand))
         age  = Daru::Vector.new(['age', 20.0, 23.0, 25.0, nil, 5.5, nil])
