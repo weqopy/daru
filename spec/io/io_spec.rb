@@ -135,7 +135,7 @@ describe Daru::IO do
           }, order: [:id, :name, :age, :city, :a1])
       end
 
-      it "loads DataFrame from second Excel Spreadsheet" do
+      it "loads DataFrame from test_xls_2.xls" do
         df = Daru::DataFrame.from_excel 'spec/fixtures/test_xls_2.xls'
 
         expect(df.nrows).to eq(7)
@@ -144,7 +144,7 @@ describe Daru::IO do
         expect(@expected_1).to eq(df)
       end
 
-      it "loads DataFrame from second Excel Spreadsheet with row_id" do
+      it "loads DataFrame from test_xls_2.xls with row_id" do
         df = Daru::DataFrame.from_excel 'spec/fixtures/test_xls_2.xls', {row_id: 1}
 
         expect(df.nrows).to eq(7)
